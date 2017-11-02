@@ -3,7 +3,7 @@ package com.angello.controllers;
 import org.springframework.stereotype.Controller;
 
 /**
- * Created by jt on 5/23/17.
+ * Created by Angello Manrique on 5/23/17.
  */
 @Controller
 public class MyController {
