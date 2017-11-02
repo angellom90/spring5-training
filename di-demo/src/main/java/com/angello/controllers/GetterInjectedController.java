@@ -2,6 +2,7 @@ package com.angello.controllers;
 
 import com.angello.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -16,7 +17,7 @@ public class GetterInjectedController {
     }
 
     @Autowired
-    public void setGreetingService(GreetingService greetingService) {
+    public void setGreetingService(@Qualifier("getterGreetingService")GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 }
