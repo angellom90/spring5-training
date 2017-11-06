@@ -5,6 +5,7 @@ import com.angello.controllers.GetterInjectedController;
 import com.angello.controllers.MyController;
 import com.angello.controllers.PropertyInjectedController;
 import com.angello.examplebeans.FakeDataSource;
+import com.angello.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -27,5 +28,8 @@ public class DiDemoApplication {
         System.out.println(fakeDataSource.getUser());
         System.out.println(fakeDataSource.getPassword());
         System.out.println(fakeDataSource.getUrl());
+
+        FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+        System.out.println(fakeJmsBroker.getUsername());
 	}
 }
