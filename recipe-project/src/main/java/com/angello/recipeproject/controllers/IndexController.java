@@ -46,7 +46,7 @@ public class IndexController {
     }
 
     @RequestMapping({"", "/", "/index"})
-    public String getRecipes(Model model){
+    public String getIndexPage(Model model){
         log.debug("I'm in the index controller");
         model.addAttribute("recipes", recipeService.getRecipes());
         return "index";

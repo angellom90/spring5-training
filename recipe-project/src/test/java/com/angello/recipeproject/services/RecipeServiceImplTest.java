@@ -36,7 +36,8 @@ public class RecipeServiceImplTest {
         HashSet recipesData = new HashSet();
         recipesData.add(recipe);
 
-        when(recipeService.getRecipes()).thenReturn(recipesData);
+        //when(recipeService.getIndexPage()).thenReturn(recipesData);
+        when(recipeRepository.findAll()).thenReturn(recipesData);
         Set<Recipe> recipes = recipeService.getRecipes();
         assertEquals(recipes.size(),1);
         verify(recipeRepository,times(1)).findAll();
