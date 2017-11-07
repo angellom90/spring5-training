@@ -1,4 +1,4 @@
-package repositories;
+package com.angello.recipeproject.repositories;
 
 import com.angello.recipeproject.domain.Recipe;
 import org.springframework.data.repository.CrudRepository;
