@@ -3,6 +3,7 @@ package com.angello.recipeproject.controllers;
 import com.angello.recipeproject.domain.Category;
 import com.angello.recipeproject.domain.UnitOfMeasure;
 import com.angello.recipeproject.services.RecipeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import java.util.Optional;
 /**
  * Created by jt on 6/1/17.
  */
+@Slf4j
 @Controller
 public class IndexController {
 
@@ -45,7 +47,7 @@ public class IndexController {
 
     @RequestMapping({"", "/", "/index"})
     public String getRecipes(Model model){
-
+        log.debug("I'm in the index controller");
         model.addAttribute("recipes", recipeService.getRecipes());
         return "index";
     }
